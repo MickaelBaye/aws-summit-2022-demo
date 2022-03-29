@@ -20,9 +20,12 @@ exports.lambdaHandler = async (event, context) => {
         response = {
             'statusCode': 200,
             'body': JSON.stringify({
-                message: 'hello world',
+                message: 'Bon AWS Summit Paris 2022 !',
                 // location: ret.data.trim()
-            })
+            }),
+            'headers': {
+                'Access-Control-Allow-Origin': '*',
+            }
         }
     } catch (err) {
         console.log(err);
